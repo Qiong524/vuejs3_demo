@@ -1,7 +1,23 @@
 import { createApp } from 'vue'
+import { createI18n } from "vue-i18n";
 import App from './App.vue'
 import store from './store'
 import router from './router'
+import zh from "./language/zh-TW.json";
+import en from "./language/en-US.json";
+
+const i18n = createI18n({
+    legacy: false,
+    locale: localStorage.getItem("locale") ?? "zh-TW",
+    fallbackLocale: "zh-TW",
+    messages: {
+        "zh-TW": zh,
+        "en-US": en
+    }
+});
+
+createApp(App).use(store).use(router).use(i18n).mount('#app');
+
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
 
@@ -18,4 +34,4 @@ import router from './router'
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-createApp(App).use(store).use(router).mount('#app')
+
