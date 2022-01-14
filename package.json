@@ -9,7 +9,6 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "features": "^0.1.0",
-    "firebase": "^8.10.0",
     "leaflet": "^1.7.1",
     "tailwindcss": "^3.0.13",
     "vue": "^3.0.0",

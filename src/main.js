@@ -18,4 +18,4 @@ import router from './router'
 // const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
-createApp(App).use(router).use(store).mount('#app')
+createApp(App).use(store).use(router).mount('#app')
