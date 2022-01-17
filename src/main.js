@@ -3,8 +3,11 @@ import { createI18n } from "vue-i18n";
 import App from './App.vue'
 import store from './store'
 import router from './router'
+import VueSidebarMenu from 'vue-sidebar-menu'
+import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import zh from "./language/zh-TW.json";
 import en from "./language/en-US.json";
+
 
 const i18n = createI18n({
     legacy: false,
@@ -16,7 +19,8 @@ const i18n = createI18n({
     }
 });
 
-createApp(App).use(store).use(router).use(i18n).mount('#app');
+const app = createApp(App)
+app.use(store).use(router).use(i18n).use(VueSidebarMenu).mount('#app');
 
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
