@@ -61,18 +61,18 @@ export default {
           href: "/testPage",
           title: "測試區",
           icon: "fa fa-list-ul",
-          child: [
-            {
-              href: "/page/sub-page-1",
-              title: "Sub Page 01",
-              icon: "fa fa-file-alt",
-            },
-            {
-              href: "/page/sub-page-2",
-              title: "Sub Page 02",
-              icon: "fa fa-file-alt",
-            },
-          ],
+          // child: [
+          //   {
+          //     href: "/page/sub-page-1",
+          //     title: "Sub Page 01",
+          //     icon: "fa fa-file-alt",
+          //   },
+          //   {
+          //     href: "/page/sub-page-2",
+          //     title: "Sub Page 02",
+          //     icon: "fa fa-file-alt",
+          //   },
+          // ],
         },
       ],
       collapsed: true,

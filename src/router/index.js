@@ -5,6 +5,7 @@ import maskMapLink from "../views/maskMapLink.vue";
 import webRTC from "../views/webRTC.vue";
 import roomManage from "../views/roomManage.vue";
 import roomMonitor from "../views/roomMonitor.vue";
+import testPage from "../views/testPage.vue";
 
 
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
     path: '/roomMonitor',
     name: 'roomMonitor',
     component: roomMonitor
+  },
+  {
+    path: '/testPage',
+    name: 'testPage',
+    component: testPage
   }
   
 ]

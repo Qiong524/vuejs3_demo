@@ -1,15 +1,19 @@
 <template>
-    <aside-conference />
+    <!-- getUserMedia -->
+    <div id="app">
+      <!-- <get-camera /> -->
+      <get-camera />
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import asideConference from '@/components/webRTC/asideConference.vue'
+import { mapActions } from 'vuex';
+import getCamera from '@/components/webRTC/getCamera.vue'
 
 export default {
-  name: 'roomMonitor',
+  name: 'testPage',
   components: {
-    asideConference
-  }
+    getCamera
+  },
 }
 </script>
