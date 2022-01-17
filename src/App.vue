@@ -11,7 +11,7 @@
       <router-link to="/webRTC"> webRTC </router-link>
       <router-link to="/maskMap"> maskMap </router-link>
       <ul>
-        <li v-for="i in 5" :key="i">
+        <li v-for="i in 3" :key="i">
           <router-link :to="`/users/${i}`"> /users/{{ i }}</router-link>
         </li>
       </ul>
@@ -58,7 +58,7 @@ export default {
           icon: "fa fa-bullseye",
         },
         {
-          href: "/page",
+          href: "/testPage",
           title: "測試區",
           icon: "fa fa-list-ul",
           child: [
