@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import User from "../views/User.vue";
 import maskMapLink from "../views/maskMapLink.vue";
 import webRTC from "../views/webRTC.vue";
+import roomManage from "../views/roomManage.vue";
+import roomMonitor from "../views/roomMonitor.vue";
 
 
 const routes = [
@@ -25,7 +27,18 @@ const routes = [
     path: '/users/:userId',
     name: 'user',
     component: User
+  },
+  {
+    path: '/roomManage',
+    name: 'roomManage',
+    component: roomManage
+  },
+  {
+    path: '/roomMonitor',
+    name: 'roomMonitor',
+    component: roomMonitor
   }
+  
 ]
 
 const router = createRouter({

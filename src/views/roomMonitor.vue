@@ -7,7 +7,7 @@
 import asideConference from '@/components/webRTC/asideConference.vue'
 
 export default {
-  name: 'roomManage',
+  name: 'roomMonitor',
   components: {
     asideConference
   }

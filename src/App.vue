@@ -1,5 +1,12 @@
 <template>
 
+    <sidebar-menu
+      class="sidebar"
+      :menu="menu"
+      :collapsed="collapsed"
+      @item-click="onItemClick"
+      @collapse="onCollapse"
+    />
     <div id="view" :class="[{'collapsed' : collapsed}]">
       <router-link to="/webRTC"> webRTC </router-link>
       <router-link to="/maskMap"> maskMap </router-link>
@@ -10,16 +17,8 @@
       </ul>
       <router-view></router-view>
     </div>
-    <sidebar-menu
-      class="sidebar"
-      :menu="menu"
-      :collapsed="collapsed"
-      @item-click="onItemClick"
-      @collapse="onCollapse"
-    />
 
 </template>
-
 
 
 <script>
@@ -31,22 +30,6 @@ import maskMap from "./components/maskMap.vue";
 
 
 import { useI18n } from "vue-i18n";
-// export default {
-//   name: "HomeView",
-//   setup() {
-//     const { t, locale } = useI18n();
-
-//     watch(locale, (newlocale) => {
-//       localStorage.setItem("locale", newlocale);
-//     });
-
-//     return {
-//       t,
-//       locale,
-//     };
-//   },
-
-// };
 
 export default {
   name: "App",
@@ -65,18 +48,18 @@ export default {
           title: "",
         },
         {
-          href: "/",
+          href: "/roomManage",
           title: this.t('roomManage'),
           icon: "fa fa-home",
         },
         {
-          href: "/basic-usage",
+          href: "/roomMonitor",
           title: this.t('roomMonitor'),
           icon: "fa fa-bullseye",
         },
         {
           href: "/page",
-          title: "Dropdown Page",
+          title: "測試區",
           icon: "fa fa-list-ul",
           child: [
             {
@@ -136,7 +119,7 @@ export default {
   padding-left: 350px;
 }
 #view.collapsed {
-  padding-left: 50px;
+  padding-left: 90px;
 }
 
 .sidebar.v-sidebar-menu .vsm-arrow:after {
