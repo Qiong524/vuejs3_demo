@@ -1,12 +1,18 @@
 <template>
-    <p>側邊攔</p>
+  <hr>
 </template>
 
 
 <script>
 export default {
-  name: 'asideConference',
+  name: 'shareArea',
+  data() {
+
+  },
   computed: {
+
+  },
+  watch: {
 
   },
   methods: {

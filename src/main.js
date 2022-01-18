@@ -5,6 +5,8 @@ import store from './store'
 import router from './router'
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import "@/plugins/fontawsome";
 import zh from "./language/zh-TW.json";
 import en from "./language/en-US.json";
 
@@ -20,7 +22,12 @@ const i18n = createI18n({
 });
 
 const app = createApp(App)
-app.use(store).use(router).use(i18n).use(VueSidebarMenu).mount('#app');
+app.use(store).use(router).use(i18n).use(VueSidebarMenu).component("font-awesome-icon", FontAwesomeIcon).mount('#app');
+
+// new Vue({
+//     render: h => h(App)
+// }).$mount('#app');
+
 
 // import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";

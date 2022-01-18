@@ -17,7 +17,7 @@
       </ul>
       <router-view></router-view>
     </div>
-
+    <h1>{{$route.params.id}}</h1>
 </template>
 
 
@@ -27,6 +27,7 @@ import { SidebarMenu } from "vue-sidebar-menu";
 import asideMenu from "./components/asideMenu.vue";
 import lightBox from "./components/lightbox.vue";
 import maskMap from "./components/maskMap.vue";
+import addRoom from "./components/webRTC/addRoom.vue";
 
 
 import { useI18n } from "vue-i18n";
@@ -83,6 +84,7 @@ export default {
     asideMenu,
     lightBox,
     maskMap,
+    addRoom,
   },
   methods: {
     ...mapActions(["fetchLocations", "fetchPharmacies"]),

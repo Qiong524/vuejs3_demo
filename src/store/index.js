@@ -9,6 +9,7 @@ export default createStore({
     keywords: '',
     showModal: false,
     infoBoxSid: null,
+    showAdd: false,
   },
   getters: {
     cityList(state){
@@ -52,6 +53,11 @@ export default createStore({
     setInfoBoxSid(state, payload){
       state.infoBoxSid = payload;
     },
+    setshowAdd(state, payload){
+      state.showAdd = payload;
+    },
+
+    
 
     
   },
